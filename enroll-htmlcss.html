@@ -1,0 +1,114 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>webtheory » Интенсив по HTML&amp;CSS</title>
+<meta name="description" content="webtheory - проект, посвященный образованию в сфере веб-разработок и веб-дизайна.">
+<meta name="keywords" content="webtheory,веб-разработка,веб-дизайн,образование,курсы,онлайн">
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:500|Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+<link rel="stylesheet" href="assets/main.css">
+
+<header class="site-header">
+    <div class="container site-header__container">
+        <a href="/index.html" class="site-header__logotype logotype">webtheory</a>
+
+        <nav class="site-header__nav">
+            <a href="/index.html" class="site-header__link">Знакомство</a>
+            <a href="/enroll.html" class="site-header__link site-header__link_active">Запись на интенсив</a>
+            <a href="/show.html" class="site-header__link">webtheory show</a>
+
+            <div class="site-header__nav-social">
+                <a href="https://vk.com/webtheory" target="_blank"><img src="assets/images/vk-social-network-logo.svg" class="site-header__social-logo" alt="VK"></a>
+                <a href="https://youtube.com/webtheory" target="_blank"><img src="assets/images/youtube-symbol.svg" class="site-header__social-logo" alt="YouTube"></a>
+                <a href="https://instagram.com/webtheory_official" target="_blank"><img src="assets/images/instagram-logo.svg" class="site-header__social-logo" alt="Instagram"></a>
+            </div>
+        </nav>
+
+        <input type="image" src="/assets/images/menu.svg" class="site-header__menu">
+    </div>
+</header>
+
+<section class="section section_cover section_header">
+    <div class="container">
+        <h1 class="section__heading">Интенсивы</h1>
+
+        <ul role="navigation" class="section__nav">
+            <li class="section__nav-item"><a href="enroll.html" class="section__nav-link">Общая информация</a></li>
+            <li class="section__nav-item"><a href="enroll-htmlcss.html" class="section__nav-link section__nav-link_active">HTML &amp; CSS</a></li>
+            <li class="section__nav-item"><a href="enroll-js.html" class="section__nav-link">JavaScript</a></li>
+            <li class="section__nav-item"><a href="enroll-php.html" class="section__nav-link">PHP</a></li>
+        </ul>
+    </div>
+</section>
+
+<form action="#" method="POST" enctype="multipart/form-data" class="apply-form" id="apply">
+    <h3 class="apply-form__title">Запись на интенсив</h3>
+
+    <label for="apply__name" class="apply-form__label">Как вас зовут?</label>
+    <input id="apply__name" name="name" type="text" placeholder="Например, Артем" class="apply-form__input" required>
+
+    <label for="apply__contact-type" class="apply-form__label">Как с вами связаться?</label>
+
+    <select id="apply__contact-type" class="apply-form__input" name="contact_type">
+        <option value="email">Почта</option>
+        <option value="social">Социальная сеть</option>
+    </select>
+
+    <input id="apply__contact-address" name="contact_address" type="text" data-placeholder-email="Например, artem@yandex.ru" data-placeholder-social="Например, https://vk.com/artem" class="apply-form__input" required>
+
+    <label class="apply-form__label">Интенсив</label>
+    <input type="hidden" name="intensive" value="htmlcss">
+    <input type="text" value="HTML&amp;CSS" class="apply-form__input" disabled>
+
+    <label for="apply__lessons-type" class="apply-form__label">Тип занятий</label>
+    <select id="apply__contact-type" class="apply-form__input">
+        <option value="individual">Индивидуальные</option>
+        <option value="group" selected>Групповые (по 5 человек в группе)</option>
+    </select>
+
+    <div style="margin: 0.5em 0">
+        <label class="checkbox">
+            <input type="checkbox" name="is_student">
+            <span>Я студент</span>
+        </label>
+    </div>
+
+    <div id="apply__student-area" style="margin-bottom: 0.5em">
+        <label for="student_id" class="apply-form__label">Подтверждение</label>
+        <div class="file-input file-input_fw">
+            <input type="file" name="student_id">
+            Загрузите скан студенческого билета
+        </div>
+
+        <label for="student_repost_link" class="apply-form__label">Ссылка на репост</label>
+        <input type="url" name="student_repost_link" class="apply-form__input" placeholder="Например, https://vk.com/artem?w=wall0000001_1234">
+    </div>
+
+    <div style="margin: 0.5em 0">
+        <label class="checkbox">
+            <input type="checkbox" name="has_coupon">
+            <span>У меня есть купон</span>
+        </label>
+    </div>
+
+    <div id="apply__coupon-area" style="margin-bottom: 0.5em">
+        <label for="coupon" class="apply-form__label">Укажите ваш купон</label>
+        <input type="text" name="coupon" class="apply-form__input" placeholder="Например, ASW81">
+    </div>
+
+    <button class="button">Записаться</button>
+</form>
+
+<footer class="site-footer">
+    <div class="container site-footer__container">
+        webtheory.org © 2018
+
+        <div role="navigation" class="site-footer__nav">
+            <a href="index.html" class="site-footer__link">Знакомство</a>
+            <a href="enroll.html" class="site-footer__link">Запись на интенсив</a>
+            <a href="show.html" class="site-footer__link">webtheory show</a>
+            <a href="contacts.html" class="site-footer__link">Контакты</a>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/bundle.js"></script>
